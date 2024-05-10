@@ -14,7 +14,7 @@ spring:
         driver-class-name: org.postgresql.Driver
         url: jdbc:postgresql://localhost:5432/micro_db
         username: postgres
-        password: Panas53982
+        password: ******
     jpa:
         properties:
             hibernate:

@@ -1,0 +1,27 @@
+eureka:
+    client:
+        register-with-eureka: false
+#spring:cloud.gateway.discovery.
+spring:
+    application:
+        name: gateway
+    config:
+        import: optional:configserver:http://localhost:8888
+    cloud:
+        gateway:
+            mvc:
+                routes:
+                    -
+                        id: students
+                        uri: http://localhost:8090
+                        predicates: 
+                            - Path=/api/v1/students/**
+                    - 
+                        id: universities
+                        uri: http://localhost:8070
+                        predicates: 
+                            - Path=/api/v1/university/**
+        
+
+server:
+    port: 8222

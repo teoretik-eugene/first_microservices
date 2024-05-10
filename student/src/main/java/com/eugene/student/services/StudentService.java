@@ -105,7 +105,6 @@ public class StudentService {
                 .toFullInformationDTO(student, universityDTO);
             return fullInformation;
         }
-
         return null;
     }
 
